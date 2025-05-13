@@ -2,7 +2,8 @@ import axios from 'axios'
 import { isRef, ref, unref, watchEffect } from 'vue'
 
 axios.defaults.baseURL = import.meta.env.VITE_APP_API_URL
-const defautConfig = {
+
+const defaultConfig = {
   method: 'get',
 }
 
@@ -26,7 +27,7 @@ export const useAxios = (url, config = {}, options = {}) => {
     error.value = null
     loading.value = true
     axios(url, {
-      ...defautConfig,
+      ...defaultConfig,
       ...config,
       params: unref(params),
       data: typeof body === 'object' ? body : {},

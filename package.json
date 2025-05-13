@@ -9,13 +9,14 @@
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "db": "json-server --watch db.json --port 5000 --delay 500"
+    "db": "json-server --watch db.json --port 5000 --delay 10"
   },
   "dependencies": {
     "axios": "^1.8.2",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "dayjs": "^1.11.13",
+    "pinia": "^3.0.2",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },

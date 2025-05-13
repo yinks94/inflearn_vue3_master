@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from '@/router/index.js'
 import funcPlugins from './plugins/func'
@@ -20,6 +21,7 @@ app.use(person, { name: '인경수' })
 app.use(globalDirectives)
 app.use(dayjs)
 app.use(router)
+app.use(createPinia())
 app.mount('#app')
 
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
